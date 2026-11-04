@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[Nome 1] &amp; [Nome 2] · 5.06.2027 · Canzo</title>
+<meta name="description" content="Wedding · Canzo, Lago di Como · 5 giugno 2027">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top">[N1] &amp; [N2]</a>
+  <nav id="menu" aria-label="Main">
+    <a href="#details" data-i18n="nav.details"></a>
+    <a href="#venue" data-i18n="nav.venue"></a>
+    <a href="#travel" data-i18n="nav.travel"></a>
+    <a href="#rsvp" data-i18n="nav.rsvp"></a>
+    <a href="#faq" data-i18n="nav.faq"></a>
+  </nav>
+  <div class="tools">
+    <div class="lang" role="group" aria-label="Language">
+      <button data-lang="it" type="button">IT</button><button data-lang="en" type="button">EN</button>
+    </div>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section class="hero" id="top">
+    <div class="hero-bg" role="img" aria-label="Hero photograph placeholder"></div>
+    <div class="hero-in">
+      <h1><span class="h-a">[Nome 1]</span><span class="h-amp">&amp;</span><span class="h-b">[Nome 2]</span></h1>
+      <p class="hero-line" data-i18n="hero.line"></p>
+      <p class="hero-date" data-i18n="hero.date"></p>
+      <div class="count" id="count" aria-live="off">
+        <div><b id="cd-d">00</b><small data-i18n="cd.d"></small></div>
+        <div><b id="cd-h">00</b><small data-i18n="cd.h"></small></div>
+        <div><b id="cd-m">00</b><small data-i18n="cd.m"></small></div>
+        <div><b id="cd-s">00</b><small data-i18n="cd.s"></small></div>
+      </div>
+      <a class="link" href="#rsvp" data-i18n="hero.cta"></a>
+    </div>
+  </section>
+
+  <!-- DETAILS -->
+  <section class="sec tint" id="details">
+    <div class="wrap">
+      <h2 class="reveal" data-i18n="details.title"></h2>
+      <p class="lead reveal" data-i18n="details.intro"></p>
+      <ol class="timeline">
+        <li class="reveal"><time>[HH:MM]</time><h3 data-i18n="ev.1"></h3><p data-i18n="ph.desc"></p></li>
+        <li class="reveal"><time>[HH:MM]</time><h3 data-i18n="ev.2"></h3><p data-i18n="ph.desc"></p></li>
+        <li class="reveal"><time>[HH:MM]</time><h3 data-i18n="ev.3"></h3><p data-i18n="ph.desc"></p></li>
+        <li class="reveal"><time>[HH:MM]</time><h3 data-i18n="ev.4"></h3><p data-i18n="ph.desc"></p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- VENUE -->
+  <section class="sec" id="venue">
+    <div class="wrap two">
+      <div class="reveal">
+        <h2 data-i18n="venue.title"></h2>
+        <p class="lead" data-i18n="venue.intro"></p>
+        <p class="venue-name">[Nome della location]</p>
+        <p class="muted">[Via e numero civico], [CAP] Canzo (CO), Italia</p>
+        <p class="muted small" data-i18n="venue.note"></p>
+        <a class="link" id="map-link" target="_blank" rel="noopener" href="#" data-i18n="venue.open"></a>
+      </div>
+      <div class="map reveal"><iframe id="map" title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </section>
+
+  <!-- TRAVEL -->
+  <section class="sec tint" id="travel">
+    <div class="wrap">
+      <h2 class="reveal" data-i18n="travel.title"></h2>
+      <p class="lead reveal" data-i18n="travel.intro"></p>
+      <div class="cols">
+        <article class="reveal"><h3 data-i18n="travel.a"></h3><p data-i18n="ph.text"></p></article>
+        <article class="reveal"><h3 data-i18n="travel.b"></h3><p data-i18n="ph.text"></p></article>
+        <article class="reveal"><h3 data-i18n="travel.c"></h3><p data-i18n="ph.text"></p></article>
+      </div>
+      <h3 class="sub reveal" data-i18n="travel.stay"></h3>
+      <ul class="stay reveal">
+        <li><span>[Nome hotel 1]</span><a href="#" data-i18n="travel.link"></a></li>
+        <li><span>[Nome hotel 2]</span><a href="#" data-i18n="travel.link"></a></li>
+        <li><span>[Nome hotel 3]</span><a href="#" data-i18n="travel.link"></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="sec" id="rsvp">
+    <div class="wrap">
+      <h2 class="reveal" data-i18n="rsvp.title"></h2>
+      <p class="lead reveal" data-i18n="rsvp.intro"></p>
+      <div class="form reveal" id="form-box">
+        <iframe id="form" title="RSVP" loading="lazy" hidden>Loading…</iframe>
+        <p class="notice" id="form-ph" data-i18n="rsvp.ph"></p>
+        <a class="link" id="form-link" target="_blank" rel="noopener" href="#" data-i18n="rsvp.open" hidden></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec tint" id="faq">
+    <div class="wrap narrow">
+      <h2 class="reveal" data-i18n="faq.title"></h2>
+      <div class="faq reveal">
+        <details open><summary data-i18n="faq.q1"></summary><p data-i18n="ph.answer"></p></details>
+        <details><summary data-i18n="faq.q2"></summary><p data-i18n="ph.answer"></p></details>
+        <details><summary data-i18n="faq.q3"></summary><p data-i18n="ph.answer"></p></details>
+        <details><summary data-i18n="faq.q4"></summary><p data-i18n="ph.answer"></p></details>
+        <details><summary data-i18n="faq.q5"></summary><p data-i18n="ph.answer"></p></details>
+        <details><summary data-i18n="faq.q6"></summary><p data-i18n="ph.answer"></p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="foot-line" data-i18n="foot.line"></p>
+  <p class="muted small">[Nome 1] &amp; [Nome 2] · 5.06.2027</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
