@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>[Nome 1] &amp; [Nome 2] · 5.06.2027 · Canzo</title>
+<title>Lucia &amp; Luca · 5.06.2027 · Canzo</title>
 <meta name="description" content="Wedding · Canzo, Lago di Como · 5 giugno 2027">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +13,9 @@
 <body>
 
 <header class="nav" id="nav">
-  <a class="brand" href="#top">[N1] &amp; [N2]</a>
+  <a class="brand" href="#top">Lucia &amp; Luca</a>
   <nav id="menu" aria-label="Main">
+    <a href="#story" data-i18n="nav.story"></a>
     <a href="#details" data-i18n="nav.details"></a>
     <a href="#venue" data-i18n="nav.venue"></a>
     <a href="#travel" data-i18n="nav.travel"></a>
@@ -32,9 +33,9 @@
 <main>
   <!-- HOME -->
   <section class="hero" id="top">
-    <div class="hero-bg" role="img" aria-label="Hero photograph placeholder"></div>
+    <div class="hero-bg" role="img" aria-label="Luca e Lucia in montagna"></div>
     <div class="hero-in">
-      <h1><span class="h-a">[Nome 1]</span><span class="h-amp">&amp;</span><span class="h-b">[Nome 2]</span></h1>
+      <h1><span class="h-a">Luca</span><span class="h-amp">&amp;</span><span class="h-b">Lucia</span></h1>
       <p class="hero-line" data-i18n="hero.line"></p>
       <p class="hero-date" data-i18n="hero.date"></p>
       <div class="count" id="count" aria-live="off">
@@ -44,6 +45,22 @@
         <div><b id="cd-s">00</b><small data-i18n="cd.s"></small></div>
       </div>
       <a class="link" href="#rsvp" data-i18n="hero.cta"></a>
+    </div>
+  </section>
+
+  <!-- OUR STORY / PHOTO GALLERY -->
+  <section class="sec story" id="story">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="story.eyebrow"></p>
+      <h2 class="reveal" data-i18n="story.title"></h2>
+      <p class="lead reveal" data-i18n="story.intro"></p>
+      <div class="gallery">
+        <figure class="gallery-main reveal"><img src="images/anello.jpg" alt="Luca e Lucia insieme, con l'anello di fidanzamento"></figure>
+        <figure class="reveal"><img src="images/vigneto.jpg" alt="Luca e Lucia tra le colline"></figure>
+        <figure class="reveal"><img src="images/mare.png" alt="Luca e Lucia al mare"></figure>
+        <figure class="reveal"><img src="images/new-york.jpg" alt="Luca e Lucia a New York in inverno"></figure>
+        <figure class="reveal"><img src="images/bacio.jpg" alt="Luca e Lucia si baciano al sole"></figure>
+      </div>
     </div>
   </section>
 
@@ -67,10 +84,10 @@
       <div class="reveal">
         <h2 data-i18n="venue.title"></h2>
         <p class="lead" data-i18n="venue.intro"></p>
-        <p class="venue-name">[Nome della location]</p>
-        <p class="muted">[Via e numero civico], [CAP] Canzo (CO), Italia</p>
+        <p class="venue-name">Villa ex Magni Rizzoli</p>
+        <p class="muted">Canzo (CO), Italia</p>
         <p class="muted small" data-i18n="venue.note"></p>
-        <a class="link" id="map-link" target="_blank" rel="noopener" href="#" data-i18n="venue.open"></a>
+        <a class="link" id="map-link" target="_blank" rel="noopener" href="https://maps.app.goo.gl/irLBZbPPgFZMQVLx9" data-i18n="venue.open"></a>
       </div>
       <div class="map reveal"><iframe id="map" title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
@@ -100,6 +117,7 @@
     <div class="wrap">
       <h2 class="reveal" data-i18n="rsvp.title"></h2>
       <p class="lead reveal" data-i18n="rsvp.intro"></p>
+      <p class="rsvp-deadline" data-i18n="rsvp.deadline"></p>
       <div class="form reveal" id="form-box">
         <iframe id="form" title="RSVP" loading="lazy" hidden>Loading…</iframe>
         <p class="notice" id="form-ph" data-i18n="rsvp.ph"></p>
@@ -126,7 +144,7 @@
 
 <footer class="foot">
   <p class="foot-line" data-i18n="foot.line"></p>
-  <p class="muted small">[Nome 1] &amp; [Nome 2] · 5.06.2027</p>
+  <p class="muted small">Lucia &amp; Luca · 5.06.2027</p>
 </footer>
 
 <script src="script.js"></script>

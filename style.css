@@ -1,5 +1,6 @@
 :root{
-  --ivory:#FAF6EE; --champagne:#EADFC8; --sand:#D8CAB0; --olive:#667058; --ink:#2C2A25; --muted:#6F6A5E;
+  --ivory:#F4F1E8; --champagne:#D9D0BC; --sand:#C8C6B2; --olive:#173D32; --ink:#20332E; --muted:#68766D;
+  --forest:#173D32; --teal:#176B68; --wisteria:#A99AC1; --sage:#A6A58B;
   --serif:"Cormorant Garamond",Georgia,serif; --sans:Inter,system-ui,sans-serif;
   --ease:cubic-bezier(.2,.7,.2,1);
 }
@@ -16,7 +17,7 @@ h3{font-size:1.9rem;font-weight:400;line-height:1.2}
 
 /* nav */
 .nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;transition:background .5s,box-shadow .5s}
-.nav.solid{background:rgba(250,246,238,.92);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--sand)}
+.nav.solid{background:rgba(244,241,232,.94);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--sand)}
 .brand{font:italic 400 1.6rem var(--serif)}
 #menu{position:absolute;inset:100% 0 auto;display:none;flex-direction:column;gap:1.2rem;padding:1.5rem;background:var(--ivory);font-size:.95rem}
 #menu.open{display:flex}
@@ -31,9 +32,10 @@ h3{font-size:1.9rem;font-weight:400;line-height:1.2}
 
 /* hero */
 .hero{position:relative;min-height:100svh;display:grid;place-items:center;padding:6rem 1.5rem 4rem;text-align:center;overflow:hidden}
-/* To use a photo: replace the gradient with  url("hero.jpg") center/cover  */
-.hero-bg{position:absolute;inset:0;background:linear-gradient(160deg,var(--sand),var(--champagne) 55%,rgba(102,112,88,.35));animation:settle 2.4s var(--ease) both}
-.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(250,246,238,.25),rgba(250,246,238,.7) 70%,var(--ivory))}
+/* Hero photograph */
+.hero-bg{position:absolute;inset:0;background:url("images/cover-montagna.jpeg") center 42%/cover no-repeat;animation:settle 2.4s var(--ease) both}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(14,38,32,.08),rgba(14,38,32,.22) 35%,rgba(244,241,232,.94) 92%,var(--ivory))}
+.hero-in{color:var(--forest);text-shadow:0 1px 18px rgba(244,241,232,.45)}
 .hero-in{position:relative}
 .hero h1{font-size:clamp(4rem,17vw,10.5rem);font-style:italic;line-height:.95}
 .hero h1 span{display:block;animation:rise 1.5s var(--ease) both}
@@ -104,4 +106,25 @@ h3{font-size:1.9rem;font-weight:400;line-height:1.2}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .reveal{opacity:1;transform:none}
+}
+
+/* invitation details */
+.eyebrow{margin-bottom:1rem;color:var(--teal);font-size:.75rem;letter-spacing:.22em;text-transform:uppercase}
+.story{background:var(--ivory)}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin-top:3rem}
+.gallery figure{overflow:hidden;min-height:13rem;background:var(--champagne)}
+.gallery img{display:block;width:100%;height:100%;min-height:13rem;object-fit:cover;transition:transform .8s var(--ease)}
+.gallery figure:hover img{transform:scale(1.035)}
+.gallery-main{grid-column:span 2}
+.gallery-main img{min-height:22rem;max-height:34rem}
+.rsvp-deadline{margin-top:1rem;color:var(--teal);font-size:.9rem}
+.venue-name{color:var(--forest)}
+.timeline{border-color:rgba(23,61,50,.35)}
+.timeline li::before{background:var(--wisteria)}
+.link{border-color:var(--teal);color:var(--teal)}
+@media (min-width:48rem){
+  .gallery{grid-template-columns:1.25fr 1fr 1fr;grid-auto-rows:17rem;gap:1rem}
+  .gallery-main{grid-column:span 2;grid-row:span 2}
+  .gallery-main img{height:100%;max-height:none}
+  .gallery figure:not(.gallery-main) img{height:100%}
 }

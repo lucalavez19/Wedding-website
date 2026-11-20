@@ -1,7 +1,7 @@
 /* ============ SETTINGS: edit these ============ */
 const CONFIG = {
   weddingDate: "2027-06-05T00:00:00+02:00", // add the ceremony time when known, e.g. 2027-06-05T16:00:00+02:00
-  mapQuery: "Canzo, Como, Italia",          // replace with the venue's exact address
+  mapQuery: "Villa ex Magni Rizzoli, Canzo, Como, Italia",          // replace with the venue's exact address
   // Google Form: open the form > Send > "<>" tab, copy the URL inside src="...". Leave as is until ready.
   formEmbedUrl: "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true",
 };
@@ -10,6 +10,7 @@ const CONFIG = {
 const T = {
   it: {
     "nav.details": "La giornata", "nav.venue": "Location", "nav.travel": "Viaggio", "nav.rsvp": "RSVP", "nav.faq": "Domande",
+    "nav.story": "La nostra storia", "story.eyebrow": "Lucia & Luca", "story.title": "Una storia in viaggio", "story.intro": "Tra montagne, città, mare e piccoli momenti quotidiani, abbiamo costruito la nostra storia. Il 5 giugno 2027 ci piacerebbe festeggiare con voi il prossimo capitolo.",
     "hero.line": "si sposano", "hero.date": "5 giugno 2027 · Canzo, Lago di Como", "hero.cta": "Conferma la tua presenza",
     "cd.d": "giorni", "cd.h": "ore", "cd.m": "minuti", "cd.s": "secondi",
     "details.title": "La giornata", "details.intro": "[Breve testo di benvenuto]",
@@ -18,13 +19,14 @@ const T = {
     "venue.title": "Location", "venue.intro": "[Breve descrizione del luogo]", "venue.note": "[Parcheggio e indicazioni per l’arrivo]", "venue.open": "Apri in Google Maps",
     "travel.title": "Viaggio e soggiorno", "travel.intro": "[Testo introduttivo]",
     "travel.a": "Come arrivare", "travel.b": "Dove dormire", "travel.c": "Spostamenti", "travel.stay": "Hotel consigliati", "travel.link": "Sito web",
-    "rsvp.title": "RSVP", "rsvp.intro": "[Data limite per rispondere]",
+    "rsvp.title": "RSVP", "rsvp.intro": "Speriamo di festeggiare insieme a voi.", "rsvp.deadline": "Vi chiediamo gentilmente di confermare la vostra presenza entro il 30 aprile 2027.",
     "rsvp.ph": "Il modulo Google non è ancora collegato. Inserisci il suo indirizzo in script.js (formEmbedUrl).", "rsvp.open": "Apri il modulo in una nuova pagina",
     "faq.title": "Domande frequenti",
     "faq.q1": "Qual è il dress code?", "faq.q2": "I bambini sono invitati?", "faq.q3": "Dove si parcheggia?", "faq.q4": "Esigenze alimentari?", "faq.q5": "Lista nozze e regali?", "faq.q6": "Entro quando devo rispondere?",
     "foot.line": "Ci vediamo a Canzo."
   },
   en: {
+    "nav.story": "Our story", "story.eyebrow": "Lucia & Luca", "story.title": "A story in motion", "story.intro": "Between mountains, cities, the sea and everyday moments, we have built our story. On 5 June 2027, we would love to celebrate the next chapter with you.",
     "nav.details": "The day", "nav.venue": "Venue", "nav.travel": "Travel", "nav.rsvp": "RSVP", "nav.faq": "Questions",
     "hero.line": "are getting married", "hero.date": "5 June 2027 · Canzo, Lake Como", "hero.cta": "Reply to your invitation",
     "cd.d": "days", "cd.h": "hours", "cd.m": "minutes", "cd.s": "seconds",
@@ -34,7 +36,7 @@ const T = {
     "venue.title": "Venue", "venue.intro": "[Short description of the place]", "venue.note": "[Parking and arrival directions]", "venue.open": "Open in Google Maps",
     "travel.title": "Travel & stay", "travel.intro": "[Introductory text]",
     "travel.a": "Getting here", "travel.b": "Where to stay", "travel.c": "Getting around", "travel.stay": "Suggested hotels", "travel.link": "Website",
-    "rsvp.title": "RSVP", "rsvp.intro": "[Reply-by date]",
+    "rsvp.title": "RSVP", "rsvp.intro": "We hope to celebrate with you.", "rsvp.deadline": "Please let us know if you can join us by 30 April 2027.",
     "rsvp.ph": "The Google Form is not connected yet. Paste its address into script.js (formEmbedUrl).", "rsvp.open": "Open the form in a new page",
     "faq.title": "Frequently asked questions",
     "faq.q1": "What is the dress code?", "faq.q2": "Are children invited?", "faq.q3": "Where can I park?", "faq.q4": "Dietary requirements?", "faq.q5": "Gifts and registry?", "faq.q6": "When should I reply by?",
