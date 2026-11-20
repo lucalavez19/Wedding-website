@@ -128,3 +128,48 @@ h3{font-size:1.9rem;font-weight:400;line-height:1.2}
   .gallery-main img{height:100%;max-height:none}
   .gallery figure:not(.gallery-main) img{height:100%}
 }
+
+
+/* ===== Lucia & Luca: visual refinement ===== */
+:root{
+  --ivory:#F4F1E8; --champagne:#D9D0BC; --sand:#C8C6B2;
+  --olive:#173D32; --ink:#20332E; --muted:#68766D;
+  --forest:#173D32; --teal:#176B68; --wisteria:#A99AC1; --sage:#A6A58B;
+}
+body{background:var(--ivory);color:var(--ink)}
+/* The day: a clear forest-green section, rather than another beige panel. */
+#details{background:var(--forest);color:var(--ivory)}
+#details .lead,#details .timeline p{color:rgba(244,241,232,.78)}
+#details .timeline{border-color:rgba(244,241,232,.35)}
+#details .timeline time{color:#D9D0BC}
+#details .timeline li::before{background:var(--wisteria)}
+/* Travel: muted sage-green background. */
+#travel{background:#E4E7DC;color:var(--forest)}
+#travel .cols p,#travel .lead{color:#52665B}
+/* RSVP: deep teal panel with light text and a restrained wisteria accent. */
+#rsvp{background:var(--teal);color:#F4F1E8}
+#rsvp .lead,#rsvp .rsvp-deadline{color:#F4F1E8}
+#rsvp .rsvp-deadline{font-weight:400}
+#rsvp .link{color:#F4F1E8;border-color:var(--wisteria)}
+#rsvp .notice{border-color:rgba(244,241,232,.5);color:#F4F1E8}
+#rsvp .form iframe{background:#fff;border-radius:8px}
+#faq{background:#EEEAE1}
+.eyebrow{color:var(--teal)}
+/* Photo gallery: fixed row heights and cropped images prevent oversized photos. */
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:clamp(145px,30vw,220px);gap:12px;margin-top:2.5rem}
+.gallery figure{min-width:0;min-height:0;height:100%;overflow:hidden;background:var(--champagne);border-radius:2px}
+.gallery img{display:block;width:100%;height:100%;min-height:0;max-height:none;object-fit:cover;object-position:center;transition:transform .8s var(--ease)}
+.gallery-main{grid-column:span 2;grid-row:span 1}
+.gallery-main img{height:100%;min-height:0;max-height:none}
+.gallery figure:hover img{transform:scale(1.035)}
+.hero-bg{background-position:center 42%;}
+@media (min-width:48rem){
+  .gallery{grid-template-columns:1.2fr 1fr 1fr;grid-auto-rows:clamp(170px,18vw,245px);gap:16px}
+  .gallery-main{grid-column:span 2;grid-row:span 2}
+  .gallery-main img,.gallery figure:not(.gallery-main) img{height:100%;min-height:0;max-height:none}
+}
+@media (max-width:47.99rem){
+  .sec{padding:4.5rem 1.25rem}
+  .gallery{grid-auto-rows:clamp(135px,42vw,190px);gap:9px}
+  .gallery-main{grid-column:span 2}
+}
