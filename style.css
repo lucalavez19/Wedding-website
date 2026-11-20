@@ -173,3 +173,88 @@ body{background:var(--ivory);color:var(--ink)}
   .gallery{grid-auto-rows:clamp(135px,42vw,190px);gap:9px}
   .gallery-main{grid-column:span 2}
 }
+
+
+/* ===== LUCIA & LUCA: VISIBLE FOREST / WISTERIA ART DIRECTION ===== */
+:root{
+  --ivory:#F4F1E8;
+  --champagne:#D9D0BC;
+  --sand:#C8C6B2;
+  --olive:#173D32;
+  --ink:#20332E;
+  --muted:#68766D;
+  --forest:#173D32;
+  --teal:#176B68;
+  --wisteria:#A99AC1;
+  --sage:#A6A58B;
+}
+
+/* Make the palette visible in the actual page, not just decorative details. */
+.story{background:#E8E8DC;color:var(--forest)}
+#details{background:var(--forest);color:#F4F1E8}
+#details .lead,
+#details .timeline p,
+#details .timeline time{color:#E2E7DF}
+#details .timeline{border-color:rgba(244,241,232,.35)}
+#details .timeline li::before{background:var(--wisteria)}
+#venue{background:#F4F1E8;color:var(--forest)}
+#travel{background:#DDE7E1;color:var(--forest)}
+#rsvp{background:var(--teal);color:#F7F4EC}
+#rsvp .lead,
+#rsvp .muted,
+#rsvp .rsvp-deadline{color:#E6EEE8}
+#rsvp .link{color:#F7F4EC;border-color:var(--wisteria)}
+#faq{background:#EEEAE1;color:var(--forest)}
+.foot{background:var(--forest);color:#F4F1E8}
+.foot .muted{color:#D9E2DB}
+.eyebrow{color:var(--teal)}
+#details .eyebrow,#rsvp .eyebrow{color:var(--wisteria)}
+.nav.solid{background:rgba(244,241,232,.96);}
+
+/* Compact, consistent photo grid: never let source dimensions dictate layout. */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-auto-rows:clamp(125px,22vw,210px);
+  gap:12px;
+  margin-top:2.5rem;
+}
+.gallery figure{
+  width:100%;
+  min-width:0;
+  min-height:0;
+  height:100%;
+  overflow:hidden;
+  background:var(--champagne);
+  border-radius:3px;
+}
+.gallery img{
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:0;
+  max-height:none;
+  object-fit:cover;
+  object-position:center;
+}
+.gallery-main{
+  grid-column:span 2;
+  grid-row:span 1;
+}
+.gallery-main img{height:100%;min-height:0;max-height:none;}
+
+@media (min-width:48rem){
+  .gallery{
+    grid-template-columns:1.15fr 1fr 1fr;
+    grid-auto-rows:clamp(150px,15vw,205px);
+    gap:14px;
+  }
+  .gallery-main{
+    grid-column:span 2;
+    grid-row:span 2;
+  }
+}
+@media (max-width:47.99rem){
+  .gallery{grid-auto-rows:clamp(125px,38vw,180px);gap:9px}
+  .sec{padding:4.5rem 1.25rem}
+}
